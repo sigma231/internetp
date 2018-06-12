@@ -5,18 +5,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <title>{{config('app_name', 'Laravel CAT')}}</title>
+        <link rel="stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     </head>
     <body>
-        <div class="container text-center">
+        <div class="col-md-4 text-center">
             @if(count($fee) > 0)
             <h1>Individual Student Payments</h1><br>
             <table class="table">
                 <thead>
                     <tr>
                         <td>Student Number</td>
-                        <td>Student Name</td>
                         <td>Date of Payment</td>
                         <td>Amount</td>
                     </tr>
@@ -25,7 +25,7 @@
                     @foreach($fee as $fee)
                         <tr>
                             <td>{{$fee->student_number}}</td>
-                            <td>{{$fee->dateofpayment}}</td>
+                            <td>{{$fee->date_of_payment}}</td>
                             <td>{{$fee->amount}}</td>
                         </tr>
                         

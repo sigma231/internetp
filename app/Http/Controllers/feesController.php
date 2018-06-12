@@ -8,14 +8,22 @@ class feesController extends Controller
 {
     //
      public function makePayment(Request $request){
-       
-        $fees_payment = new fees;
-        $fees_payment->student_number = $request->input('student_id');
-        $fees_payment->date_of_payment = $request->input('date_of_payment');
-        $fees_payment->amount = $request->input('amount');
+         $validatedData = $request->validate([
+            'student_id' => 'required|integer',
+            'date_of_payment' => 'required|date',
+            'amount' => 'required|integer',
+        ]);
         
-        $fees_payment->save();
+            $fees_payment = new fees;
+            $fees_payment->student_number = $request->input('student_id');
+            $fees_payment->date_of_payment = $request->input('date_of_payment');
+            $fees_payment->amount = $request->input('amount');
         
+            $fees_payment->save();
+        
+            return view('paymentadded');       
+               
+         
         
     }
     public function allstudentfees()

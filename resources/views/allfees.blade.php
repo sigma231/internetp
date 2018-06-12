@@ -1,4 +1,12 @@
-<tbody>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+        <tbody>
                     @foreach($fee as $fee)
                         <tr>
                             <td>{{$fee->studentnumber}}</td>
@@ -11,4 +19,8 @@
                         <?php  $total += $fee->amount ?>
                         
                     @endforeach
-</tbody>
+        </tbody>      
+    </table>
+    
+  </body>
+</html>

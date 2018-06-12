@@ -1,12 +1,16 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    </head>
 <?php $total = 0  ?>
 <body>
-        <div class="container text-center">
+        <div class="col-md-4 text-center">
             <h1>Student Payments</h1><br>
             <table class="table">
                 <thead>
                     <tr>
                         <td>Student Number</td>
-                        <td>Student Name</td>
+                        
                         <td>Date of Payment</td>
                         <td>Amount</td>
                     </tr>
